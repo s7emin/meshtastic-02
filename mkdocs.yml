@@ -1,0 +1,80 @@
+# --- Базовая информация ---
+site_name: Meshtastic РБ
+site_description: Сообщество Meshtastic Башкортостан — инструкции, где купить, советы и частые вопросы
+#site_author: Meshtastic Team
+site_url: https://s7emin.github.io/meshtastic-02/
+
+# --- Тема Material ---
+theme:
+  name: material
+  language: ru
+  logo: images/logo.svg
+#  favicon: images/favicon.png
+  features:
+    - navigation.instant     # моментальная загрузка страниц
+    - navigation.tabs        # вкладки сверху
+    - navigation.tabs.sticky # вкладки закреплены при прокрутке
+    - navigation.top         # кнопка "вверх"
+    - search.highlight       # подсветка результатов поиска
+    - search.suggest         # автодополнение поиска
+    - content.code.copy      # кнопка "копировать код"
+#    - content.action.edit    # ссылка "редактировать на GitHub"
+  palette:
+    # Светлая тема (как в официальной документации Meshtastic)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white       # Белая шапка
+      accent: teal         # Зелёный акцентный цвет для ссылок
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на тёмную тему
+    # Тёмная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black       # Тёмная шапка
+      accent: teal         # Зелёный акцентный цвет для ссылок
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
+
+# --- Настройки поиска ---
+plugins:
+  - search:
+      lang: ru
+
+# --- Навигация ---
+nav:
+  - Главная: index.md
+  - Где купить: shops.md
+  - Настройка: setup.md
+  - Решение проблем: troubleshooting.md
+
+# --- Ссылки в подвале ---
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/meshtastic_ufa
+    - icon: fontawesome/brands/github
+      link: https://github.com/s7emin/meshtastic-02
+  generator: false
+  analytics:
+    provider: false   # можно позже подключить Google Analytics
+
+# --- Ссылка "Редактировать эту страницу" ---
+#repo_url: https://github.com/s7emin/meshtastic-02
+#edit_uri: edit/main/docs/
+
+# --- Markdown расширения ---
+markdown_extensions:
+  - admonition            # блоки "info", "warning" и т.п.
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
+  - pymdownx.details      # раскрывающиеся блоки
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - toc:
+      permalink: true
